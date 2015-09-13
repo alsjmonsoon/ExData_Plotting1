@@ -23,7 +23,7 @@ sourcePartial("ExData_Plotting1/plot1.R", "#from here", "#to here")
 #plot1.R or step1 obove.
 
 power07<-read.table("finalDT.txt",header=TRUE,sep=",", stringsAsFactors=FALSE,check.names=FALSE)
-power07$dates<-strptime(power07$dates,"%Y-%m-%d %H:%M:%S")
+power07$dates<-strptime(power07$Dates,"%Y-%m-%d %H:%M:%S")
 
 ## set up mutilple plots in two row by two column configuration
 
