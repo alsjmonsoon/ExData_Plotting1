@@ -23,7 +23,7 @@ sourcePartial("ExData_Plotting1/plot1.R", "#from here", "#to here")
 #plot1.R or step1 obove.
 
 power07<-read.table("finalDT.txt",header=TRUE,sep=",", stringsAsFactors=FALSE,check.names=FALSE)
-power07$dates<-strptime(power07$Dates,"%Y-%m-%d %H:%M:%S")
+power07$Dates<-strptime(power07$Dates,"%Y-%m-%d %H:%M:%S")
 
 ## set up mutilple plots in two row by two column configuration
 
@@ -55,3 +55,4 @@ with(power07,plot(Dates,Voltage, type="l",ylab="Voltage",xlab="datetime"))
 with(power07,plot(Dates,Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="datetime"))
 
 dev.off() # turn off the png device
+
