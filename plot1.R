@@ -43,7 +43,9 @@ str(feb2007final) # check the dataframe
 # set the dates column as POSIXLt 
 feb2007final$Dates<-strptime(feb2007final$Dates,"%Y-%m-%d %H:%M:%S")
 
-# write a data table and save on your working directory. This subset data will be used for making plots 2,3,and 4.
+# write a data table and save on your working directory. This subset data can be used directly 
+#for making plots 2,3,and 4.[Please note the save the file name is "finalDT.txt]
+
 write.table(feb2007final,file="finalDT.txt",quote=FALSE, sep=",",row.names=FALSE,col.names=TRUE)
 
 #to here
